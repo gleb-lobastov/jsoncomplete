@@ -1,0 +1,52 @@
+{
+   "id": "http://gleb-lobastov.ru/schemes/django-fixtures/transaction.json",
+   "$schema": "http://json-schema.org/draft-04/schema#",
+   "description": {
+      "model": "Transaction",
+      "process_default": true
+   },
+   "type": "object",
+   "required": [
+            "fields",
+            "pk",
+            "model"
+   ],
+   "properties": {
+      "pk": {"type": "integer"},
+      "model": {"type": "string"},
+      "fields": {
+         "required": [
+            "date",
+            "fk_performer"
+         ],
+         "properties": {
+            "amount": {
+               "type": "integer",
+               "default": 0
+            },
+            "comment": {
+               "type": "string"
+            },
+            "date": {
+               "type": "date"
+            },
+            "fk_account_from": {
+               "type": "integer"
+            },
+            "fk_account_to": {
+               "type": "integer"
+            },
+            "fk_category": {
+               "type": "integer"
+            },
+            "fk_performer": {
+               "type": "integer"
+            },
+            "fk_place": {
+               "type": "integer"
+            }
+         },
+         "additionalItems": false
+      }
+   }
+}
